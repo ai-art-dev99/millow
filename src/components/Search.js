@@ -1,4 +1,4 @@
-const Search = () => {
+const Search = ({ setHomeTitle }) => {
     return (
         <header>
             <h2 className="header__title">Search it. Explore it. Buy it.</h2>
@@ -6,6 +6,7 @@ const Search = () => {
                 type="text"
                 className="header__search"
                 placeholder="Enter an address, neighborhood, city, or ZIP code"
+                onChange={(e) => setHomeTitle(e.target.value)}
             />
         </header>
     );
